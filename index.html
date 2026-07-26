@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Mobile screen ke liye responsive banane ke liye -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rock Paper Scissors Game</title>
+
+    <!-- CSS file ko HTML ke saath connect kar rahe hain -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Game Container -->
+    <div class="game-container">
+
+        <!-- Game Heading -->
+        <h1>🎮 Rock Paper Scissors</h1>
+
+        <!-- Game Instructions -->
+        <p class="instruction">
+            Choose Rock, Paper or Scissors
+        </p>
+
+        <!-- Buttons -->
+        <div class="choices">
+
+            <!-- Rock button -->
+            <button class="choice-btn" onclick="playGame('rock')">
+                🪨
+                <span>Rock</span>
+            </button>
+
+            <!-- Paper button -->
+            <button class="choice-btn" onclick="playGame('paper')">
+                📄
+                <span>Paper</span>
+            </button>
+
+            <!-- Scissors button -->
+            <button class="choice-btn" onclick="playGame('scissors')">
+                ✂️
+                <span>Scissors</span>
+            </button>
+
+        </div>
+
+        <!-- User aur Computer ki choice yahan show hogi -->
+        <div class="result-box">
+
+            <p>
+                Your Choice:
+                <span id="user-choice">-</span>
+            </p>
+
+            <p>
+                Computer Choice:
+                <span id="computer-choice">-</span>
+            </p>
+
+            <!-- Winner/Loser/Tie yahan show hoga -->
+            <h2 id="result">Make your choice!</h2>
+
+        </div>
+
+        <!-- Score Section -->
+        <div class="score-board">
+
+            <div>
+                <h3>You</h3>
+                <p id="user-score">0</p>
+            </div>
+
+            <div>
+                <h3>Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+
+        </div>
+
+        <!-- Play Again button -->
+        <button class="reset-btn" onclick="resetGame()">
+            🔄 Play Again
+        </button>
+
+    </div>
+
+    <!-- JavaScript file ko HTML ke saath connect kar rahe hain -->
+    <script src="script.js"></script>
+
+</body>
+</html>
